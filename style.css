@@ -6,14 +6,17 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: #1a1a1a;
+  color: #e0e0e0;
 }
 
 .header {
   position: relative;
   top: -20px;
   width: 100%;
-  background-color: #011627;
-  color: #fdfffc;
+  background-color: #0d1117;
+  color: #f0f6fc;
+  border-bottom: 1px solid #30363d;
 }
 
 .header h2 {
@@ -40,16 +43,17 @@ div.n-queen {
   font-size: 14px;
   padding: 4px;
   border: none;
-  border-bottom: 2px solid #2ec4b6;
+  border-bottom: 2px solid #58a6ff;
   outline: none;
   background: transparent;
+  color: #f0f6fc;
 }
 
 .inputbox label {
   position: absolute;
   top: 4px;
   left: 0px;
-  color: #2ec4b6;
+  color: #58a6ff;
   font-size: 14px;
   pointer-events: none;
   transition: 0.3s;
@@ -75,11 +79,12 @@ div.n-queen {
 
 .slider {
   -webkit-appearance: none;
+  appearance: none;
   width: 100%;
   margin: 0 auto;
   height: 7px;
   border-radius: 7px;
-  background: linear-gradient(90deg, #e8eddf 60%, #e8eddf 60%);
+  background: linear-gradient(90deg, #30363d 60%, #30363d 60%);
   outline: none;
 }
 
@@ -89,7 +94,7 @@ div.n-queen {
   top: -10px;
   font-size: 14px;
   font-weight: 500;
-  color: #fa7921;
+  color: #ff7b72;
 }
 
 .slider::before {
@@ -99,18 +104,19 @@ div.n-queen {
   right: 0px;
   font-size: 14px;
   font-weight: 500;
-  color: #fa7921;
+  color: #ff7b72;
 }
 
 /* Google chrome */
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
+  appearance: none;
   width: 20px;
   height: 20px;
   position: relative;
   top: -2px;
   cursor: pointer;
-  background-color: #fa7921;
+  background-color: #ff7b72;
   border-radius: 50%;
   z-index: 2;
 }
@@ -127,22 +133,23 @@ div.n-queen {
 .slider::-moz-range-thumb {
   width: 20px;
   height: 20px;
-  background-color: #fa7921;
+  background-color: #ff7b72;
   cursor: pointer;
   position: relative;
   top: -2px;
   border-radius: 50%;
   z-index: 2;
+  border: none;
 }
 
 .slider::-webkit-slider-thumb:hover {
-  box-shadow: 0 0 0 2px white, 0 0 0 4px #fa7921;
+  box-shadow: 0 0 0 2px #1a1a1a, 0 0 0 4px #ff7b72;
 }
 
 #progress-bar {
   width: 60%;
   height: 7px;
-  background: #ffd200;
+  background: #f9e71e;
   border-radius: 7px;
   position: absolute;
   top: 7px;
@@ -154,10 +161,10 @@ div.n-queen {
   left: 35%;
   border: none;
   outline: none;
-  color: #fdfffc;
+  color: #f0f6fc;
   width: 80px;
   height: 35px;
-  background-color: #f72585;
+  background-color: #238636;
   border-radius: 10px;
   font-size: 16px;
   font-weight: 600;
@@ -177,7 +184,7 @@ div.n-queen {
   text-align: center;
   font-size: 18px;
   font-weight: 500;
-  color: #247ba0;
+  color: #58a6ff;
 }
 
 #n-queen-board {
@@ -196,9 +203,11 @@ div.n-queen {
   justify-content: center;
   flex-direction: column;
   margin: 0 10px;
-  box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
   border-radius: 3px;
   bottom: 10px;
+  background-color: #21262d;
+  border: 1px solid #30363d;
 }
 
 table {
@@ -208,12 +217,32 @@ table {
   padding: 10px;
   margin-bottom: 10px;
   align-self: center;
+  background-color: #161b22;
 }
 
 td {
   width: 35px;
   height: 35px;
   text-align: center;
+  border: 1px solid #30363d;
+}
+
+/* Chess board pattern for better visibility */
+td:nth-child(odd) {
+  background-color: #21262d;
+}
+
+td:nth-child(even) {
+  background-color: #161b22;
+}
+
+/* Alternate row pattern */
+tr:nth-child(even) td:nth-child(odd) {
+  background-color: #161b22;
+}
+
+tr:nth-child(even) td:nth-child(even) {
+  background-color: #21262d;
 }
 
 h4 {
@@ -221,9 +250,9 @@ h4 {
   top: -5px;
   padding: 8px;
   width: 95%;
-  background-color: #0582ca;
+  background-color: #1f6feb;
   align-self: center;
-  color: #fdfffc;
+  color: #f0f6fc;
   text-align: center;
   border-radius: 4px 4px 0 0;
 }
