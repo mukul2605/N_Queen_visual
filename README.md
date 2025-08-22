@@ -6,3 +6,5 @@
 
 ![N-Queen-visualisation](visualisation.gif)
 
+The website is deployed here: [Click Here!](https://n-queen-visual.onrender.com/)
+
